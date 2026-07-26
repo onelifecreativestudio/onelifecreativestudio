@@ -1,545 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Life Creative Studio | Premium Film & Storytelling</title>
-    <link rel="icon" type="image/png" href="images/One_Life_Creative_studio_business_logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-dark: #0a0a0c;
-            --card-bg: #141417;
-            --text-light: #f5f5f7;
-            --text-muted: #86868b;
-            --accent-cyan: #00f2fe;
-            --accent-magenta: #4facfe;
-            --accent-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .logo-img {
-            max-width: 180px;
-            height: auto;
-            margin-bottom: 2rem;
-        }
-
-        .hero h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .tagline-container {
-            margin-bottom: 2rem;
-        }
-
-        .tagline-word {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(1.2rem, 2vw, 1.8rem);
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--text-muted);
-            display: inline-block;
-            margin: 0 0.5rem;
-        }
-
-        .tagline-word:hover {
-            color: var(--accent-cyan);
-            transition: color 0.3s ease;
-        }
-
-        .hero p {
-            font-size: clamp(1.1rem, 1.5vw, 1.4rem);
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 3rem auto;
-            font-weight: 300;
-        }
-
-        .cta-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background: var(--accent-gradient);
-            color: #000;
-            font-weight: 600;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-light);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--accent-cyan);
-        }
-
-        section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        section h2 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.01em;
-        }
-
-        .section-desc {
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            font-size: 1.1rem;
-        }
-
-        .carousel-container {
-            position: relative;
-            margin: 0 -2rem;
-            padding: 0 2rem;
-        }
-
-        .carousel {
-            display: flex;
-            gap: 1.5rem;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            padding-bottom: 2rem;
-            scroll-behavior: smooth;
-        }
-
-        .carousel::-webkit-scrollbar {
-            height: 6px;
-        }
-        .carousel::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.02);
-        }
-        .carousel::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-        }
-        .carousel::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-cyan);
-        }
-
-        .story-card {
-            scroll-snap-align: start;
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .youtube-carousel .story-card {
-            flex: 0 0 420px;
-        }
-
-        .instagram-carousel .story-card {
-            flex: 0 0 260px;
-        }
-
-        .story-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 242, 254, 0.4);
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
-            background: #000;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .insta-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 125%;
-            height: 0;
-            background: #111;
-            display: block;
-            text-decoration: none;
-        }
-
-        .insta-placeholder-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.65;
-            transition: transform 0.4s ease, opacity 0.3s ease;
-        }
-
-        .story-card:hover .insta-placeholder-img {
-            transform: scale(1.04);
-            opacity: 0.85;
-        }
-
-        .insta-overlay-badge {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.6);
-            border: 2px solid #fff;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .story-card:hover .insta-overlay-badge {
-            background: var(--accent-gradient);
-            border-color: transparent;
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .story-info {
-            padding: 1.2rem;
-        }
-
-        .story-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent-cyan);
-            margin-bottom: 0.3rem;
-            display: block;
-        }
-
-        .story-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        @media (min-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .about-text h3 {
-            color: var(--text-muted);
-            font-weight: 400;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .about-text h4 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .about-text p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-        }
-
-        .about-featured-video {
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .service-icon {
-            color: var(--accent-cyan);
-            font-size: 1.25rem;
-            margin-top: 0.2rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-
-        .contact-footer {
-            text-align: center;
-            padding: 8rem 2rem;
-            background: linear-gradient(to top, rgba(79, 172, 254, 0.05) 0%, transparent 100%);
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-        }
-
-        .contact-footer h2 {
-            font-family: 'Syne', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 1rem;
-        }
-
-        .contact-email {
-            font-size: clamp(1.2rem, 2vw, 1.8rem);
-            color: var(--text-light);
-            text-decoration: none;
-            margin-bottom: 3rem;
-            display: inline-block;
-            font-weight: 300;
-            transition: color 0.3s ease;
-        }
-
-        .contact-email:hover {
-            color: var(--accent-cyan);
-        }
-
-        .footer-socials {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Life Creative Studio | Cinematic Highlight Videos</title>
+  <link rel="icon" type="image/png" href="images/One_Life_Creative_studio_business_logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #06070a;
+      --surface: #11131a;
+      --surface-2: #171a24;
+      --text: #f5f7fb;
+      --muted: #9ea3b0;
+      --accent: #4cc9f0;
+      --accent-2: #7b61ff;
+      --accent-gradient: linear-gradient(135deg, #4cc9f0 0%, #7b61ff 100%);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at top, rgba(76,201,240,0.12), transparent 28%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 0 4rem;
+    }
+    .logo { width: 160px; margin-bottom: 1.5rem; }
+    h1, h2, h3 { font-family: 'Syne', sans-serif; letter-spacing: -0.02em; }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      margin-bottom: 1rem;
+      line-height: 1.05;
+    }
+    .hero .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: clamp(1.02rem, 1.2rem + 0.4vw, 1.25rem);
+      max-width: 720px;
+      margin-bottom: 2rem;
+    }
+    .cta-row {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+      border: 1px solid transparent;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent-gradient); color: #071019; }
+    .btn-secondary { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.12); color: var(--text); }
+    .section { padding: 3.5rem 0; }
+    .section h2 {
+      font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+      margin-bottom: 0.7rem;
+    }
+    .section .lead {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 1.6rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.025));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 1.4rem;
+      min-height: 100%;
+    }
+    .card h3 { font-size: 1.1rem; margin-bottom: 0.45rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    .story-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+    .story-box {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 1.5rem;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .video-card {
+      background: var(--surface);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .video-frame {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      background: #000;
+    }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video-card .info { padding: 1rem 1rem 1.2rem; }
+    .video-card .tag { color: var(--accent); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.3rem; display: inline-block; }
+    .footer {
+      text-align: center;
+      padding: 2rem 0 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 2rem;
+    }
+    .footer .email { font-size: 1.15rem; color: var(--text); display: inline-block; margin: 0.6rem 0 1rem; }
+    @media (max-width: 780px) {
+      .story-grid { grid-template-columns: 1fr; }
+      .page { padding: 0 1rem 3rem; }
+      .hero { padding-top: 1rem; }
+    }
+  </style>
 </head>
 <body>
-
+  <div class="page">
     <header class="hero">
-        <img src="images/One_Life_Creative_studio_business_logo.png" alt="One Life Creative Studio Logo" class="logo-img">
-        <h1>One Life Creative Studio</h1>
-        
-        <div class="tagline-container">
-            <span class="tagline-word">Capture.</span>
-            <span class="tagline-word">Create.</span>
-            <span class="tagline-word">Celebrate.</span>
-        </div>
-
-        <p>Helping people and businesses transform everyday moments into cinematic stories.</p>
-
-        <div class="cta-group">
-            <a href="https://www.instagram.com/onelifecreativestudio/" target="_blank" class="btn btn-primary">Instagram DM</a>
-            <a href="https://www.youtube.com/@OneLifeCreativeStudio" target="_blank" class="btn btn-secondary">YouTube Channel</a>
-            <a href="mailto:onelifecreativestudio@gmail.com" class="btn btn-secondary">Email Isaac</a>
-        </div>
+      <img class="logo" src="images/One_Life_Creative_studio_business_logo.png" alt="One Life Creative Studio logo" />
+      <div class="eyebrow">Cinematic highlight videos • unforgettable stories</div>
+      <h1>Bring your best moments back to life.</h1>
+      <p>I create cinematic highlight videos that turn everyday moments into unforgettable stories. Whether it is a holiday, a kids sports season, a travel adventure, or a milestone event, I help your memories feel vibrant, personal, and worth sharing.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.instagram.com/onelifecreativestudio/" target="_blank">Instagram</a>
+        <a class="btn btn-secondary" href="https://www.youtube.com/@OneLifeCreativeStudio" target="_blank">YouTube</a>
+        <a class="btn btn-secondary" href="mailto:onelifecreativestudio@gmail.com">Email</a>
+      </div>
     </header>
 
-    <section id="youtube-stories">
-        <h2>Latest Film Stories</h2>
-        <p class="section-desc">Cinematic short films and documentaries from YouTube.</p>
-        <div class="carousel-container">
-            <div class="carousel youtube-carousel">
-                
-                <div class="story-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/aJOg1ybIdxk" title="Venus Bay Beach No.5" allowfullscreen></iframe>
-                    </div>
-                    <div class="story-info">
-                        <span class="story-tag">Venus Bay, Vic, Australia</span>
-                        <div class="story-title">A Day at the Beach</div>
-                    </div>
-                </div>
-
-                <div class="story-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/5zjbnenrWIg?si=2UGSweul-_8Y6UpB" title="Wanaka & Cardrona Valley Drone Footage" allowfullscreen></iframe>
-                    </div>
-                    <div class="story-info">
-                        <span class="story-tag">Wanaka & Cardrona Valley Drone Footage</span>
-                        <div class="story-title">Scenic New Zealand Landscapes</div>
-                    </div>
-                </div>
-
-                <div class="story-card">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/kTELcO0coQ0?si=6U7_ClZxysnbo0YH" title="Rosebud, Vic, " allowfullscreen></iframe>
-                    </div>
-                    <div class="story-info">
-                        <span class="story-tag">🌊 Rosebud, Vic, Australia</span>
-                        <div class="story-title">Coastal Rhythm</div>
-                    </div>
-                </div>
-
-            </div>
+    <section class="section">
+      <h2>What I create</h2>
+      <p class="lead">From cherished family memories to fast-paced sports clips, I shape raw footage into polished stories that feel effortless to watch and easy to share.</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Holiday videos</h3>
+          <p>Turn trips, celebrations, and seasonal moments into cinematic recaps people want to relive.</p>
         </div>
+        <div class="card">
+          <h3>Kids sports highlights</h3>
+          <p>Celebrate growth, effort, and big moments with highlight reels that feel energetic and proud.</p>
+        </div>
+        <div class="card">
+          <h3>Travel & drone stories</h3>
+          <p>Bring landscapes, adventures, and scenic footage together into immersive visual stories.</p>
+        </div>
+        <div class="card">
+          <h3>Milestone events</h3>
+          <p>Capture birthdays, gatherings, and special days in a way that feels timeless and shareable.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="instagram-stories">
-        <h2>Social Chapters</h2>
-        <p class="section-desc">Everyday moments and updates captured live on Instagram Reels.</p>
-        <div class="carousel-container">
-            <div class="carousel instagram-carousel">
-                
-
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DPi2o_mCRW5/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DPi2o_mCRW5/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DPi2o_mCRW5/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by One Life Creative Studio (@onelifecreativestudio)</a></p></div></blockquote>
-<script async src="//www.instagram.com/embed.js"></script>
-
-
-                <div class="story-card">
-                    <a href="https://www.instagram.com/reel/DPi2o_mCRW5/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank" class="insta-container">
-                        <img src="images/One_Life_Creative_studio_business_logo.png" alt="Goa Wedding" class="insta-placeholder-img">
-                        <div class="insta-overlay-badge">▶</div>
-                    </a>
-                    <div class="story-info">
-                        <span class="story-tag">🌴 Goa Wedding</span>
-                        <div class="story-title">Chapters of Love</div>
-                    </div>
-                </div>
-
-                <div class="story-card">
-                    <a href="https://www.instagram.com/onelifecreativestudio/" target="_blank" class="insta-container">
-                        <img src="images/One_Life_Creative_studio_business_logo.png" alt="Alfie" class="insta-placeholder-img">
-                        <div class="insta-overlay-badge">▶</div>
-                    </a>
-                    <div class="story-info">
-                        <span class="story-tag">🐶 Alfie</span>
-                        <div class="story-title">Everyday Moments</div>
-                    </div>
-                </div>
-
-            </div>
+    <section class="section">
+      <div class="story-grid">
+        <div class="story-box">
+          <h2>Why this matters</h2>
+          <p class="lead">So much content sits silently on phones, forgotten and never shared. I help bring those moments back into view with thoughtful editing, cinematic pacing, and a storytelling approach that makes memories feel alive again.</p>
+          <p class="lead">Your footage deserves more than storage. It deserves to be seen, shared, and treasured.</p>
         </div>
+        <div class="story-box">
+          <h2>My focus</h2>
+          <p class="lead">I blend creativity, emotion, and clean storytelling to create videos that feel personal and polished without losing the spontaneity of the moment.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="about">
-        <div class="about-grid">
-            <div class="about-text">
-                <h3>Hi, I'm Isaac.</h3>
-                <h4>Founder & Head of Creative</h4>
-                <p>I believe we only get one life.</p>
-                <p>Every holiday. Every wedding. Every celebration. Every family memory. They're chapters of your story.</p>
-                <p>My goal is to turn those moments into films you'll still be watching years from now.</p>
-            </div>
-            <div class="about-featured-video">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" title="About Isaac" allowfullscreen></iframe>
-                </div>
-            </div>
+    <section class="section">
+      <h2>Featured stories</h2>
+      <p class="lead">A glimpse of the kind of cinematic storytelling I create across travel, holiday, and lifestyle content.</p>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/aJOg1ybIdxk" title="Venus Bay Beach" allowfullscreen></iframe>
+          </div>
+          <div class="info">
+            <span class="tag">Beach escape</span>
+            <h3>A Day at the Beach</h3>
+          </div>
         </div>
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/5zjbnenrWIg?si=2UGSweul-_8Y6UpB" title="Wanaka & Cardrona Valley" allowfullscreen></iframe>
+          </div>
+          <div class="info">
+            <span class="tag">Drone footage</span>
+            <h3>Scenic New Zealand Landscapes</h3>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe src="https://www.youtube.com/embed/kTELcO0coQ0?si=6U7_ClZxysnbo0YH" title="Rosebud coastal footage" allowfullscreen></iframe>
+          </div>
+          <div class="info">
+            <span class="tag">Coastal story</span>
+            <h3>Coastal Rhythm</h3>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="services">
-        <h2>Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <span class="service-icon">✓</span>
-                <h3>Holiday Videos</h3>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">✓</span>
-                <h3>Wedding Highlights</h3>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">✓</span>
-                <h3>Sporting Events</h3>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">✓</span>
-                <h3>Business Storytelling</h3>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">✓</span>
-                <h3>Drone Videos</h3>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">✓</span>
-                <h3>Family Films</h3>
-            </div>
-        </div>
-    </section>
-
-    <footer class="contact-footer">
-        <h2>Let's tell your story.</h2>
-        <a href="mailto:onelifecreativestudio@gmail.com" class="contact-email">onelifecreativestudio@gmail.com</a>
-        
-        <div class="footer-socials">
-            <a href="https://www.instagram.com/onelifecreativestudio/" target="_blank" class="btn btn-secondary">Instagram DM</a>
-            <a href="https://www.youtube.com/@OneLifeCreativeStudio" target="_blank" class="btn btn-secondary">YouTube</a>
-        </div>
+    <footer class="footer">
+      <h2>Let’s create something memorable.</h2>
+      <a class="email" href="mailto:onelifecreativestudio@gmail.com">onelifecreativestudio@gmail.com</a>
+      <div class="cta-row">
+        <a class="btn btn-secondary" href="https://www.instagram.com/onelifecreativestudio/" target="_blank">Instagram</a>
+        <a class="btn btn-secondary" href="https://www.youtube.com/@OneLifeCreativeStudio" target="_blank">YouTube</a>
+      </div>
     </footer>
-
+  </div>
 </body>
 </html>
