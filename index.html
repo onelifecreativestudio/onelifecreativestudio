@@ -3,266 +3,287 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08080A" />
+  <meta name="description" content="One Life Creative Studio creates cinematic highlight videos for travel, holidays, family memories, lifestyle moments, sport and milestone events." />
+  <meta name="keywords" content="cinematic highlight videos, travel video editing, family video editing, holiday videos, drone footage editing, One Life Creative Studio" />
+  <meta name="author" content="One Life Creative Studio" />
+
+  <meta property="og:title" content="One Life Creative Studio | Cinematic Highlight Videos" />
+  <meta property="og:description" content="Bring your best moments back to life with cinematic highlight videos for travel, family, lifestyle, sport and milestone moments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/Website_banner_One_Life CREATIVE_STUDIO.png" />
+
   <title>One Life Creative Studio | Cinematic Highlight Videos</title>
+
   <link rel="icon" type="image/png" href="images/One_Life_Creative_studio_business_logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
-  <style>
- :root{
-
-    --bg-dark:#0b0b0d;
-
-    --bg-section:#111113;
-
-    --card-bg:#17171a;
-
-    --text-light:#FAFAFA;
-
-    --text-muted:#bdbdbd;
-
-    --navy:#12254A;
-
-    --orange:#F8A62A;
-
-    --yellow:#FFD248;
-
-    --coral:#F46B63;
-
-    --sky:#8CCFE9;
-
-    --burgundy:#924B71;
-
-    --accent-gradient:
-    linear-gradient(
-    135deg,
-    #F8A62A,
-    #F46B63,
-    #8CCFE9);
-
-}
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-
-      
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: radial-gradient(circle at top, rgba(76,201,240,0.12), transparent 28%), var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-    .page { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem 4rem; }
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem 0 4rem;
-    }
-    .logo { width: 160px; margin-bottom: 1.5rem; }
-    h1, h2, h3 { font-family: 'Syne', sans-serif; letter-spacing: -0.02em; }
-    .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 4.2rem);
-      margin-bottom: 1rem;
-      line-height: 1.05;
-    }
-    .hero .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.28em;
-      font-size: 0.78rem;
-      color: var(--accent);
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-    .hero p {
-      color: var(--muted);
-      font-size: clamp(1.02rem, 1.2rem + 0.4vw, 1.25rem);
-      max-width: 720px;
-      margin-bottom: 2rem;
-    }
-    .cta-row {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
-      margin-bottom: 1.25rem;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.85rem 1.4rem;
-      border-radius: 999px;
-      font-weight: 600;
-      transition: transform .2s ease, border-color .2s ease, background .2s ease;
-      border: 1px solid transparent;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--accent-gradient); color: #071019; }
-    .btn-secondary { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.12); color: var(--text); }
-    .section { padding: 3.5rem 0; }
-    .section h2 {
-      font-size: clamp(1.7rem, 2.6vw, 2.3rem);
-      margin-bottom: 0.7rem;
-    }
-    .section .lead {
-      color: var(--muted);
-      max-width: 700px;
-      margin-bottom: 1.6rem;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-    }
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.025));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 20px;
-      padding: 1.4rem;
-      min-height: 100%;
-    }
-    .card h3 { font-size: 1.1rem; margin-bottom: 0.45rem; }
-    .card p { color: var(--muted); font-size: 0.95rem; }
-    .story-grid {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: 1.2fr 0.8fr;
-    }
-    .story-box {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 24px;
-      padding: 1.5rem;
-    }
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-    .video-card {
-      background: var(--surface);
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .video-frame {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      background: #000;
-    }
-    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-    .video-card .info { padding: 1rem 1rem 1.2rem; }
-    .video-card .tag { color: var(--accent); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.3rem; display: inline-block; }
-    .footer {
-      text-align: center;
-      padding: 2rem 0 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      margin-top: 2rem;
-    }
-    .footer .email { font-size: 1.15rem; color: var(--text); display: inline-block; margin: 0.6rem 0 1rem; }
-    @media (max-width: 780px) {
-      .story-grid { grid-template-columns: 1fr; }
-      .page { padding: 0 1rem 3rem; }
-      .hero { padding-top: 1rem; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="page">
-    <header class="hero">
-      <img class="logo" src="images/One_Life_Creative_studio_business_logo.png" alt="One Life Creative Studio logo" />
-      <div class="eyebrow">Cinematic highlight videos • unforgettable stories</div>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="hero" id="top" aria-label="One Life Creative Studio hero section">
+    <video class="hero-video" autoplay muted loop playsinline poster="images/Website_banner_One_Life CREATIVE_STUDIO.png" aria-hidden="true">
+      <source src="images/Website_logo_video_landscape.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="#top" aria-label="One Life Creative Studio home">
+        <img src="images/One_Life_Creative_studio_business_logo.png" alt="One Life Creative Studio logo" />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#work">Work</a>
+        <a href="#stories">Stories</a>
+        <a href="#process">Process</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content reveal">
+      <img class="hero-logo" src="images/One_Life_Creative_studio_business_logo.png" alt="One Life Creative Studio logo" />
+      <p class="eyebrow">Cinematic highlight videos</p>
       <h1>Bring your best moments back to life.</h1>
-      <p>I create cinematic highlight videos that turn everyday moments into unforgettable stories. Whether it is a holiday, a kids sports season, a travel adventure, or a milestone event, I help your memories feel vibrant, personal, and worth sharing.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://www.instagram.com/onelifecreativestudio/" target="_blank">Instagram</a>
-        <a class="btn btn-secondary" href="https://www.youtube.com/@OneLifeCreativeStudio" target="_blank">YouTube</a>
-        <a class="btn btn-secondary" href="mailto:onelifecreativestudio@gmail.com">Email</a>
-      </div>
-    </header>
+      <p class="hero-subtitle">
+        Travel memories, family adventures, sporting milestones and special events — beautifully edited into stories worth watching again and again.
+      </p>
 
-    <section class="section">
-      <h2>What I create</h2>
-      <p class="lead">From cherished family memories to fast-paced sports clips, I shape raw footage into polished stories that feel effortless to watch and easy to share.</p>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Holiday videos</h3>
-          <p>Turn trips, celebrations, and seasonal moments into cinematic recaps people want to relive.</p>
+      <div class="button-row">
+        <a class="btn btn-primary" href="mailto:onelifecreativestudio@gmail.com">Start a Project</a>
+        <a class="btn btn-secondary" href="https://www.instagram.com/onelifecreativestudio/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="btn btn-secondary" href="https://www.youtube.com/@OneLifeCreativeStudio" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#work" aria-label="Scroll to work section">
+      <span></span>
+    </a>
+  </header>
+
+  <main id="main">
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">What I create</p>
+          <h2 id="work-title">Personal films with a cinematic feel.</h2>
+          <p>
+            I turn raw clips from phones, cameras and drones into polished highlight videos that feel emotional, effortless and easy to share.
+          </p>
         </div>
-        <div class="card">
-          <h3>Kids sports highlights</h3>
-          <p>Celebrate growth, effort, and big moments with highlight reels that feel energetic and proud.</p>
-        </div>
-        <div class="card">
-          <h3>Travel & drone stories</h3>
-          <p>Bring landscapes, adventures, and scenic footage together into immersive visual stories.</p>
-        </div>
-        <div class="card">
-          <h3>Milestone events</h3>
-          <p>Capture birthdays, gatherings, and special days in a way that feels timeless and shareable.</p>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <img src="images/Greek_island.jpg" alt="Bright coastal island scene with blue water and cliffs" loading="lazy" />
+            <div class="service-content">
+              <p class="card-tag">Holiday videos</p>
+              <h3>Relive the trip</h3>
+              <p>Turn travel footage, beach days, family holidays and destination moments into a story that feels like the best parts of the experience.</p>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <img src="images/Lake_como_1.jpg" alt="Elegant lakeside terrace with mountain and water views" loading="lazy" />
+            <div class="service-content">
+              <p class="card-tag">Travel stories</p>
+              <h3>Make the journey cinematic</h3>
+              <p>Combine scenic shots, drone clips, small details and atmosphere into a travel film with flow, pace and style.</p>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <img src="images/Bar_glasses.JPG" alt="Styled bottle and glasses with blue cinematic lighting" loading="lazy" />
+            <div class="service-content">
+              <p class="card-tag">Milestone events</p>
+              <h3>Capture the occasion</h3>
+              <p>Transform celebrations, gatherings and special moments into short films that feel premium, personal and memorable.</p>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <img src="images/Lemon_tree.jpg" alt="Lemon tree beside a bright coastal terrace" loading="lazy" />
+            <div class="service-content">
+              <p class="card-tag">Lifestyle edits</p>
+              <h3>Elevate everyday moments</h3>
+              <p>Create beautiful edits from simple moments — quiet details, family days, hobbies, weekends and personal memories.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="story-grid">
-        <div class="story-box">
-          <h2>Why this matters</h2>
-          <p class="lead">So much content sits silently on phones, forgotten and never shared. I help bring those moments back into view with thoughtful editing, cinematic pacing, and a storytelling approach that makes memories feel alive again.</p>
-          <p class="lead">Your footage deserves more than storage. It deserves to be seen, shared, and treasured.</p>
+    <section class="section section-alt" aria-labelledby="why-title">
+      <div class="container split">
+        <div class="split-image reveal">
+          <img src="images/Lake_como_2.jpg" alt="Coastal evening village with boats and warm lights" loading="lazy" />
         </div>
-        <div class="story-box">
-          <h2>My focus</h2>
-          <p class="lead">I blend creativity, emotion, and clean storytelling to create videos that feel personal and polished without losing the spontaneity of the moment.</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <h2>Featured stories</h2>
-      <p class="lead">A glimpse of the kind of cinematic storytelling I create across travel, holiday, and lifestyle content.</p>
-      <div class="video-grid">
-        <div class="video-card">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/aJOg1ybIdxk" title="Venus Bay Beach" allowfullscreen></iframe>
-          </div>
-          <div class="info">
-            <span class="tag">Beach escape</span>
-            <h3>A Day at the Beach</h3>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/5zjbnenrWIg?si=2UGSweul-_8Y6UpB" title="Wanaka & Cardrona Valley" allowfullscreen></iframe>
-          </div>
-          <div class="info">
-            <span class="tag">Drone footage</span>
-            <h3>Scenic New Zealand Landscapes</h3>
-          </div>
-        </div>
-        <div class="video-card">
-          <div class="video-frame">
-            <iframe src="https://www.youtube.com/embed/kTELcO0coQ0?si=6U7_ClZxysnbo0YH" title="Rosebud coastal footage" allowfullscreen></iframe>
-          </div>
-          <div class="info">
-            <span class="tag">Coastal story</span>
-            <h3>Coastal Rhythm</h3>
+        <div class="split-content reveal">
+          <p class="section-kicker">Why it matters</p>
+          <h2 id="why-title">Your footage deserves more than storage.</h2>
+          <p>
+            Meaningful clips often sit forgotten on phones, hard drives and cloud folders. One Life Creative Studio helps bring those moments back into view.
+          </p>
+          <p>
+            Through thoughtful selection, music, pacing, colour and visual rhythm, everyday footage becomes a story you can watch, share and keep.
+          </p>
+
+          <div class="mini-list" aria-label="Editing benefits">
+            <div>
+              <span>01</span>
+              <p>Raw clips become a clear story.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <p>Key moments are shaped with pacing and emotion.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <p>The final video feels polished, personal and memorable.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    
-    <footer class="footer">
-      <h2>Let’s create something memorable.</h2>
-      <a class="email" href="mailto:onelifecreativestudio@gmail.com">onelifecreativestudio@gmail.com</a>
-      <div class="cta-row">
-        <a class="btn btn-secondary" href="https://www.instagram.com/onelifecreativestudio/" target="_blank">Instagram</a>
-        <a class="btn btn-secondary" href="https://www.youtube.com/@OneLifeCreativeStudio" target="_blank">YouTube</a>
+    <section class="section" id="stories" aria-labelledby="stories-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Stories worth remembering</p>
+          <h2 id="stories-title">Every frame can become part of the story.</h2>
+          <p>
+            From coastal escapes and luxury travel moments to celebrations and quiet details, the right edit brings the memory back to life.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-large reveal">
+            <img src="images/Greek_island.jpg" alt="Coastal island with bright blue sea and white cliffs" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="images/Lake_como_1.jpg" alt="Lakeside terrace framed by arches" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="images/Lemon_tree.jpg" alt="Lemon tree overlooking clear blue water" loading="lazy" />
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="images/Bar_glasses.JPG" alt="Bottle and glasses lit by bright blue background lighting" loading="lazy" />
+          </figure>
+          <figure class="gallery-item gallery-wide reveal">
+            <img src="images/Lake_como_2.jpg" alt="Evening coastal village with boats on the water" loading="lazy" />
+          </figure>
+        </div>
       </div>
-    </footer>
-  </div>
+    </section>
+
+    <section class="section section-alt" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">How it works</p>
+          <h2 id="process-title">Simple process. Premium result.</h2>
+          <p>You provide the footage. I help shape it into a story that feels considered, cinematic and easy to share.</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <span>01</span>
+            <h3>Share your footage</h3>
+            <p>Send through phone, drone, camera or social clips.</p>
+          </article>
+          <article class="process-card reveal">
+            <span>02</span>
+            <h3>Build the story</h3>
+            <p>I review the footage and identify the strongest moments, flow and mood.</p>
+          </article>
+          <article class="process-card reveal">
+            <span>03</span>
+            <h3>Edit cinematically</h3>
+            <p>Music, pacing, transitions, colour and visual rhythm bring the story together.</p>
+          </article>
+          <article class="process-card reveal">
+            <span>04</span>
+            <h3>Relive the moment</h3>
+            <p>Receive a finished highlight video ready to keep, watch and share.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="videos" aria-labelledby="videos-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Featured videos</p>
+          <h2 id="videos-title">Cinematic edits in motion.</h2>
+          <p>A sample of the kind of travel, lifestyle and coastal storytelling created by One Life Creative Studio.</p>
+        </div>
+
+        <div class="video-grid">
+          <article class="video-card reveal">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/aJOg1ybIdxk" title="A Day at the Beach" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <p class="card-tag">Beach escape</p>
+              <h3>A Day at the Beach</h3>
+            </div>
+          </article>
+
+          <article class="video-card reveal">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/5zjbnenrWIg" title="Scenic New Zealand Landscapes" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <p class="card-tag">Drone footage</p>
+              <h3>Scenic New Zealand Landscapes</h3>
+            </div>
+          </article>
+
+          <article class="video-card reveal">
+            <div class="video-frame">
+              <iframe src="https://www.youtube.com/embed/kTELcO0coQ0" title="Coastal Rhythm" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <p class="card-tag">Coastal story</p>
+              <h3>Coastal Rhythm</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="contact" aria-labelledby="contact-title">
+      <div class="final-overlay" aria-hidden="true"></div>
+      <div class="final-content reveal">
+        <img src="images/One_Life_Creative_studio_business_logo.png" alt="One Life Creative Studio logo" />
+        <p class="section-kicker">Ready when you are</p>
+        <h2 id="contact-title">Every trip.<br />Every milestone.<br />Every memory.</h2>
+        <p>One story worth remembering.</p>
+
+        <div class="button-row">
+          <a class="btn btn-primary" href="mailto:onelifecreativestudio@gmail.com">Email Me</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/onelifecreativestudio/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="btn btn-secondary" href="https://www.youtube.com/@OneLifeCreativeStudio" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+
+        <a class="email-link" href="mailto:onelifecreativestudio@gmail.com">onelifecreativestudio@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-note">
+    <p>© <span id="year"></span> One Life Creative Studio. Cinematic stories for moments worth remembering.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
