@@ -10,10 +10,17 @@
   </url>
 
   <url>
-    <loc>https://onelifecreativestudio.com/creative-mentoring.html</loc>
+    <loc>https://onelifecreativestudio.com/idea-studio.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://onelifecreativestudio.com/inspiration.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

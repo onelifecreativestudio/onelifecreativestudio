@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="canonical" href="https://onelifecreativestudio.com/creative-mentoring.html">
+<link rel="canonical" href="https://onelifecreativestudio.com/idea-studio.html">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9DHYK182R"></script>
 <script>
@@ -17,27 +17,30 @@
 <meta name="description" content="Practical guidance from One Life Creative Studio for people with an idea, side hustle or growing business. Start simple, launch smart, choose the right tools and grow over time." />
 <meta name="keywords" content="business ideas, MVP, prototypes, websites, brand identity, AI automation, digital strategy, landing pages, business systems, One Life Creative Studio" />
 <meta name="author" content="One Life Creative Studio" />
-<meta property="og:title" content="Bring Your Ideas To Life | One Life Creative Studio" />
+<meta property="og:title" content="Idea Studio | One Life Creative Studio" />
 <meta property="og:description" content="Practical guidance for people with an idea, side hustle or growing business. Start simple, build what you need and grow when you're ready." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="images/creative-mentoring/Creative_mentoring_hero.png" />
-<title>Bring Your Ideas To Life | One Life Creative Studio</title>
+<meta property="og:image" content="images/idea-studio/Idea_studio_hero.png" />
+<title>Idea Studio | One Life Creative Studio</title>
 <link rel="icon" type="image/png" href="images/Homepage_images/One_Life_Creative_studio_business_logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 <style>
-  .mentoring-page .mentoring-hero .hero-content { max-width: 860px; }
-  .mentoring-page .hero-subtitle { max-width: 720px; }
-  .mentoring-page .section-heading { max-width: 820px; margin: 0 auto 2.4rem; text-align: center; }
-  .mentoring-page .lead-text { font-size: clamp(1.05rem, 2vw, 1.25rem); color: rgba(255,255,255,.82); }
-  .mentoring-page .section-intro { max-width: 760px; margin: 0 auto 2.2rem; text-align: center; color: rgba(255,255,255,.72); }
+  .idea-studio-page .idea-studio-hero .hero-content { max-width: 860px; }
+  .idea-studio-page .hero-subtitle { max-width: 720px; }
+  .idea-studio-page .section-heading { max-width: 820px; margin: 0 auto 2.4rem; text-align: center; }
+  .idea-studio-page .lead-text { font-size: clamp(1.05rem, 2vw, 1.25rem); color: rgba(255,255,255,.82); }
+  .idea-studio-page .section-intro { max-width: 760px; margin: 0 auto 2.2rem; text-align: center; color: rgba(255,255,255,.72); }
+  .idea-studio-page .page-jumpnav { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding: 30px 0 0; }
+  .idea-studio-page .page-jumpnav a { padding: .55rem 1.1rem; border-radius: 999px; border: 1px solid rgba(214,174,111,.24); color: rgba(255,255,255,.78); font-size: .82rem; font-weight: 700; background: rgba(214,174,111,.06); transition: .2s ease; }
+  .idea-studio-page .page-jumpnav a:hover { border-color: rgba(214,174,111,.55); color: #F7D9A5; background: rgba(214,174,111,.14); transform: translateY(-2px); }
   /* Shared card base for example / trust / timeline / audience cards */
-  .mentoring-page .example-card,
-  .mentoring-page .trust-card,
-  .mentoring-page .timeline-step,
-  .mentoring-page .audience-card {
+  .idea-studio-page .example-card,
+  .idea-studio-page .trust-card,
+  .idea-studio-page .timeline-step,
+  .idea-studio-page .audience-card {
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,.12);
@@ -49,24 +52,24 @@
     -webkit-backdrop-filter: blur(18px);
     transition: transform .28s ease, border-color .28s ease, background .28s ease;
   }
-  .mentoring-page .example-card:hover,
-  .mentoring-page .trust-card:hover,
-  .mentoring-page .timeline-step:hover,
-  .mentoring-page .audience-card:hover { transform: translateY(-6px); border-color: rgba(214,174,111,.42); background: linear-gradient(145deg, rgba(214,174,111,.15), rgba(255,255,255,.045)); }
-  .mentoring-page .card-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 16px; margin-bottom: 1rem; color: #F7D9A5; background: rgba(214,174,111,.13); border: 1px solid rgba(214,174,111,.24); font-size: 1.25rem; }
-  .mentoring-page .example-card h3,
-  .mentoring-page .trust-card h3,
-  .mentoring-page .timeline-step h3,
-  .mentoring-page .audience-card h3 { margin: 0 0 .55rem; }
-  .mentoring-page .example-card p,
-  .mentoring-page .trust-card p,
-  .mentoring-page .timeline-step p,
-  .mentoring-page .audience-card p { margin: 0; color: rgba(255,255,255,.72); line-height: 1.65; }
+  .idea-studio-page .example-card:hover,
+  .idea-studio-page .trust-card:hover,
+  .idea-studio-page .timeline-step:hover,
+  .idea-studio-page .audience-card:hover { transform: translateY(-6px); border-color: rgba(214,174,111,.42); background: linear-gradient(145deg, rgba(214,174,111,.15), rgba(255,255,255,.045)); }
+  .idea-studio-page .card-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 16px; margin-bottom: 1rem; color: #F7D9A5; background: rgba(214,174,111,.13); border: 1px solid rgba(214,174,111,.24); font-size: 1.25rem; }
+  .idea-studio-page .example-card h3,
+  .idea-studio-page .trust-card h3,
+  .idea-studio-page .timeline-step h3,
+  .idea-studio-page .audience-card h3 { margin: 0 0 .55rem; }
+  .idea-studio-page .example-card p,
+  .idea-studio-page .trust-card p,
+  .idea-studio-page .timeline-step p,
+  .idea-studio-page .audience-card p { margin: 0; color: rgba(255,255,255,.72); line-height: 1.65; }
 
   /* "How I Can Help" tiles — redesigned */
-  .mentoring-page .mentoring-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; counter-reset: mentorcard; }
-  .mentoring-page .mentor-card {
-    counter-increment: mentorcard;
+  .idea-studio-page .idea-studio-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; counter-reset: ideacard; }
+  .idea-studio-page .idea-card {
+    counter-increment: ideacard;
     position: relative;
     overflow: hidden;
     border-radius: 22px;
@@ -78,7 +81,7 @@
     -webkit-backdrop-filter: blur(18px);
     transition: transform .3s ease, border-color .3s ease, background .3s ease, box-shadow .3s ease;
   }
-  .mentoring-page .mentor-card::before {
+  .idea-studio-page .idea-card::before {
     content: '';
     position: absolute;
     inset: 0 0 auto 0;
@@ -87,8 +90,8 @@
     opacity: 0;
     transition: opacity .3s ease;
   }
-  .mentoring-page .mentor-card::after {
-    content: counter(mentorcard, decimal-leading-zero);
+  .idea-studio-page .idea-card::after {
+    content: counter(ideacard, decimal-leading-zero);
     position: absolute;
     top: 1.5rem;
     right: 1.6rem;
@@ -98,14 +101,14 @@
     letter-spacing: .08em;
     color: rgba(255,255,255,.22);
   }
-  .mentoring-page .mentor-card:hover {
+  .idea-studio-page .idea-card:hover {
     transform: translateY(-8px);
     border-color: rgba(214,174,111,.5);
     background: linear-gradient(165deg, rgba(214,174,111,.16), rgba(255,255,255,.03));
     box-shadow: 0 26px 80px rgba(0,0,0,.32);
   }
-  .mentoring-page .mentor-card:hover::before { opacity: 1; }
-  .mentoring-page .mentor-card .card-icon {
+  .idea-studio-page .idea-card:hover::before { opacity: 1; }
+  .idea-studio-page .idea-card .card-icon {
     width: 50px;
     height: 50px;
     border-radius: 15px;
@@ -119,13 +122,13 @@
     transition: transform .3s ease;
     border: none;
   }
-  .mentoring-page .mentor-card:hover .card-icon { transform: scale(1.08) rotate(-4deg); }
-  .mentoring-page .mentor-card h3 { margin: 0 0 .6rem; padding-right: 1.8rem; font-size: 1.15rem; }
-  .mentoring-page .mentor-card p { margin: 0; color: rgba(255,255,255,.72); line-height: 1.65; font-size: .95rem; }
+  .idea-studio-page .idea-card:hover .card-icon { transform: scale(1.08) rotate(-4deg); }
+  .idea-studio-page .idea-card h3 { margin: 0 0 .6rem; padding-right: 1.8rem; font-size: 1.15rem; }
+  .idea-studio-page .idea-card p { margin: 0; color: rgba(255,255,255,.72); line-height: 1.65; font-size: .95rem; }
 
   /* Philosophy panel — tightened spacing */
-  .mentoring-page #philosophy { padding: 70px 0; }
-  .mentoring-page .philosophy-panel {
+  .idea-studio-page #philosophy { padding: 70px 0; }
+  .idea-studio-page .philosophy-panel {
     position: relative;
     overflow: hidden;
     max-width: 980px;
@@ -136,31 +139,31 @@
     background: radial-gradient(circle at top left, rgba(214,174,111,.26), transparent 34%), linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.035));
     box-shadow: 0 30px 100px rgba(0,0,0,.34);
   }
-  .mentoring-page .philosophy-panel::after { content: ''; position: absolute; inset: auto -15% -40% 40%; height: 280px; background: radial-gradient(circle, rgba(214,174,111,.16), transparent 62%); pointer-events: none; }
-  .mentoring-page .philosophy-panel h2 { font-family: "Syne", sans-serif; font-size: clamp(1.9rem, 3.4vw, 2.9rem); line-height: 1.15; letter-spacing: -0.03em; margin: 10px 0 14px; }
-  .mentoring-page .philosophy-panel .lead-text { margin-bottom: 12px; }
-  .mentoring-page .philosophy-panel > p:last-of-type { margin-bottom: 0; }
-  .mentoring-page .philosophy-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; margin-top: 1.4rem; }
-  .mentoring-page .philosophy-list span { border: 1px solid rgba(255,255,255,.10); border-radius: 999px; padding: .65rem .9rem; font-size: .88rem; color: rgba(255,255,255,.82); background: rgba(0,0,0,.18); text-align: center; }
-  .mentoring-page .audience-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
-  .mentoring-page .audience-card { padding: 1.1rem; min-height: 120px; }
-  .mentoring-page .timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; counter-reset: steps; }
-  .mentoring-page .timeline-step { min-height: 210px; }
-  .mentoring-page .timeline-step .step-number { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; margin-bottom: 1rem; color: #08080A; background: #F7D9A5; font-weight: 800; }
-  .mentoring-page .example-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
-  .mentoring-page .example-card { min-height: 190px; }
-  .mentoring-page .trust-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: 1.2rem; align-items: stretch; }
-  .mentoring-page .trust-card.featured { padding: clamp(1.6rem, 4vw, 3rem); background: radial-gradient(circle at top right, rgba(214,174,111,.23), transparent 36%), linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.035)); }
-  .mentoring-page .trust-list { display: grid; gap: 1rem; }
-  .mentoring-page .mini-proof { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
-  .mentoring-page .mini-proof span { padding: .7rem .95rem; border-radius: 999px; border: 1px solid rgba(214,174,111,.22); color: rgba(255,255,255,.78); background: rgba(214,174,111,.08); }
-  @media (max-width: 1050px) { .mentoring-page .mentoring-card-grid, .mentoring-page .example-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .mentoring-page .audience-grid, .mentoring-page .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); } .mentoring-page .trust-layout { grid-template-columns: 1fr; } .mentoring-page .philosophy-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 680px) { .mentoring-page .mentoring-card-grid, .mentoring-page .example-grid, .mentoring-page .audience-grid, .mentoring-page .timeline, .mentoring-page .philosophy-list { grid-template-columns: 1fr; } .mentoring-page .mentor-card, .mentoring-page .example-card, .mentoring-page .trust-card, .mentoring-page .timeline-step, .mentoring-page .audience-card { border-radius: 20px; } }
+  .idea-studio-page .philosophy-panel::after { content: ''; position: absolute; inset: auto -15% -40% 40%; height: 280px; background: radial-gradient(circle, rgba(214,174,111,.16), transparent 62%); pointer-events: none; }
+  .idea-studio-page .philosophy-panel h2 { font-family: "Syne", sans-serif; font-size: clamp(1.9rem, 3.4vw, 2.9rem); line-height: 1.15; letter-spacing: -0.03em; margin: 10px 0 14px; }
+  .idea-studio-page .philosophy-panel .lead-text { margin-bottom: 12px; }
+  .idea-studio-page .philosophy-panel > p:last-of-type { margin-bottom: 0; }
+  .idea-studio-page .philosophy-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; margin-top: 1.4rem; }
+  .idea-studio-page .philosophy-list span { border: 1px solid rgba(255,255,255,.10); border-radius: 999px; padding: .65rem .9rem; font-size: .88rem; color: rgba(255,255,255,.82); background: rgba(0,0,0,.18); text-align: center; }
+  .idea-studio-page .audience-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+  .idea-studio-page .audience-card { padding: 1.1rem; min-height: 120px; }
+  .idea-studio-page .timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; counter-reset: steps; }
+  .idea-studio-page .timeline-step { min-height: 210px; }
+  .idea-studio-page .timeline-step .step-number { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; margin-bottom: 1rem; color: #08080A; background: #F7D9A5; font-weight: 800; }
+  .idea-studio-page .example-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
+  .idea-studio-page .example-card { min-height: 190px; }
+  .idea-studio-page .trust-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: 1.2rem; align-items: stretch; }
+  .idea-studio-page .trust-card.featured { padding: clamp(1.6rem, 4vw, 3rem); background: radial-gradient(circle at top right, rgba(214,174,111,.23), transparent 36%), linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.035)); }
+  .idea-studio-page .trust-list { display: grid; gap: 1rem; }
+  .idea-studio-page .mini-proof { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
+  .idea-studio-page .mini-proof span { padding: .7rem .95rem; border-radius: 999px; border: 1px solid rgba(214,174,111,.22); color: rgba(255,255,255,.78); background: rgba(214,174,111,.08); }
+  @media (max-width: 1050px) { .idea-studio-page .idea-studio-card-grid, .idea-studio-page .example-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .idea-studio-page .audience-grid, .idea-studio-page .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); } .idea-studio-page .trust-layout { grid-template-columns: 1fr; } .idea-studio-page .philosophy-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 680px) { .idea-studio-page .idea-studio-card-grid, .idea-studio-page .example-grid, .idea-studio-page .audience-grid, .idea-studio-page .timeline, .idea-studio-page .philosophy-list { grid-template-columns: 1fr; } .idea-studio-page .idea-card, .idea-studio-page .example-card, .idea-studio-page .trust-card, .idea-studio-page .timeline-step, .idea-studio-page .audience-card { border-radius: 20px; } }
 </style>
 </head>
-<body class="mentoring-page">
+<body class="idea-studio-page">
 <a class="skip-link" href="#main">Skip to main content</a>
-<header class="hero hero-static mentoring-hero" id="top">
+<header class="hero hero-static idea-studio-hero" id="top">
   <div class="hero-static-bg" aria-hidden="true"></div>
   <div class="hero-overlay hero-overlay-strong" aria-hidden="true"></div>
   <nav class="site-nav" aria-label="Primary navigation">
@@ -168,15 +171,15 @@
     <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
     <div class="nav-links" id="primary-navigation">
       <a href="index.html">Home</a>
-      <a href="#help">How I Help</a>
-      <a href="#philosophy">My Philosophy</a>
-      <a href="#for">Who It's For</a>
-      <a href="#approach">Approach</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#videos">Videos</a>
+      <a href="inspiration.html">Inspiration</a>
+      <a href="idea-studio.html" aria-current="page">Idea Studio</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
   <div class="hero-content reveal">
-    <p class="eyebrow">One Life Creative Studio</p>
+    <p class="eyebrow">Idea Studio</p>
     <h1>Bring your ideas to life.</h1>
     <p class="hero-subtitle">Practical guidance for people with an idea, side hustle or growing business.</p>
     <div class="button-row">
@@ -186,9 +189,15 @@
   </div>
 </header>
 <main id="main">
+  <div class="container page-jumpnav reveal">
+    <a href="#help">How I Help</a>
+    <a href="#philosophy">My Philosophy</a>
+    <a href="#for">Who It's For</a>
+    <a href="#approach">Approach</a>
+  </div>
   <section class="section">
     <div class="container split">
-      <div class="split-image reveal"><img src="images/creative-mentoring/Creative_mentoring_hero.png" alt="Creative planning workspace with notebook, laptop, camera and warm light" loading="lazy" /></div>
+      <div class="split-image reveal"><img src="images/idea-studio/Idea_studio_hero.png" alt="Creative planning workspace with notebook, laptop, camera and warm light" loading="lazy" /></div>
       <div class="split-content reveal">
         <p class="section-kicker">Why I created this</p>
         <h2>Some ideas need a practical person beside them.</h2>
@@ -206,19 +215,19 @@
         <h2>Clear thinking across the things that matter first.</h2>
         <p>We can focus on the parts that will help you move forward now, without making the business feel bigger, heavier or more expensive than it needs to be.</p>
       </div>
-      <div class="mentoring-card-grid reveal">
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">✦</div><h3>Business Ideas</h3><p>Shape the idea, test the value and find a simple way to explain what you are building.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">⌁</div><h3>Business Foundations</h3><p>Work through the basics like offer, audience, message, tools and the first version of your setup.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">◎</div><h3>MVPs &amp; Prototypes</h3><p>Create a practical first version so you can learn from real people before over-investing.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">◐</div><h3>Websites</h3><p>Plan a clean website or landing page that gives people enough confidence to take the next step.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">◆</div><h3>Brand Identity</h3><p>Clarify the look, tone and story so your business feels consistent and easy to recognise.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">◌</div><h3>Social Media</h3><p>Choose simple content ideas for Instagram, YouTube or other channels without trying to do everything.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">▶</div><h3>Video Strategy</h3><p>Use video to explain the story behind your business, service or product in a natural way.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">△</div><h3>AI &amp; Automation</h3><p>Use AI and automation where it genuinely saves time, not just because everyone is talking about it.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">⌘</div><h3>Technology Decisions</h3><p>Choose software, domains, Google Workspace and tools that fit your current stage.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">✎</div><h3>Content Planning</h3><p>Turn your ideas into useful content pillars, simple posts and stories people can understand.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">⌬</div><h3>Digital Strategy</h3><p>Connect the website, content, tools and next steps into a practical direction.</p></article>
-        <article class="mentor-card"><div class="card-icon" aria-hidden="true">▣</div><h3>Business Systems</h3><p>Keep your processes simple first, then improve them when the work and customers justify it.</p></article>
+      <div class="idea-studio-card-grid reveal">
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">✦</div><h3>Business Ideas</h3><p>Shape the idea, test the value and find a simple way to explain what you are building.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">⌁</div><h3>Business Foundations</h3><p>Work through the basics like offer, audience, message, tools and the first version of your setup.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">◎</div><h3>MVPs &amp; Prototypes</h3><p>Create a practical first version so you can learn from real people before over-investing.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">◐</div><h3>Websites</h3><p>Plan a clean website or landing page that gives people enough confidence to take the next step.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">◆</div><h3>Brand Identity</h3><p>Clarify the look, tone and story so your business feels consistent and easy to recognise.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">◌</div><h3>Social Media</h3><p>Choose simple content ideas for Instagram, YouTube or other channels without trying to do everything.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">▶</div><h3>Video Strategy</h3><p>Use video to explain the story behind your business, service or product in a natural way.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">△</div><h3>AI &amp; Automation</h3><p>Use AI and automation where it genuinely saves time, not just because everyone is talking about it.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">⌘</div><h3>Technology Decisions</h3><p>Choose software, domains, Google Workspace and tools that fit your current stage.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">✎</div><h3>Content Planning</h3><p>Turn your ideas into useful content pillars, simple posts and stories people can understand.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">⌬</div><h3>Digital Strategy</h3><p>Connect the website, content, tools and next steps into a practical direction.</p></article>
+        <article class="idea-card"><div class="card-icon" aria-hidden="true">▣</div><h3>Business Systems</h3><p>Keep your processes simple first, then improve them when the work and customers justify it.</p></article>
       </div>
     </div>
   </section>
@@ -295,21 +304,50 @@
     </div>
   </section>
 
-  <section class="final-cta mentoring-final" id="contact">
+  <section class="final-cta idea-studio-final" id="contact">
     <div class="final-content reveal">
       <p class="section-kicker">Let's bring it to life</p>
       <h2>Have an idea?</h2>
       <p>Whether you're starting from scratch or refining an existing business, I'd love to hear what you're working on.</p>
       <div class="button-row">
         <a class="btn btn-primary" href="mailto:onelifecreativestudio@gmail.com?subject=Let's%20Explore%20My%20Idea%20Together">Let's explore it together</a>
-        <a class="btn btn-secondary" href="https://www.instagram.com/onelifecreativestudio/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a class="btn btn-secondary" href="index.html">Back to Home</a>
       </div>
       <a class="email-link" href="mailto:onelifecreativestudio@gmail.com">onelifecreativestudio@gmail.com</a>
     </div>
   </section>
 </main>
-<footer class="footer-note"><p>© <span id="year"></span> One Life Creative Studio. Established 2025. ABN: 94904785745.</p></footer>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/Homepage_images/One_Life_Creative_studio_business_logo.png" alt="One Life Creative Studio logo" />
+        <p>Practical guidance for people bringing an idea, side hustle or growing business to life.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#work">Work</a>
+          <a href="inspiration.html">Inspiration</a>
+          <a href="idea-studio.html">Idea Studio</a>
+          <a href="mailto:onelifecreativestudio@gmail.com">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <div class="footer-social">
+          <a class="social-icon" href="https://www.instagram.com/onelifecreativestudio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="images/Social_media/instagram-icon.svg" alt="Instagram" /></a>
+          <a class="social-icon" href="https://www.youtube.com/@OneLifeCreativeStudio" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="images/Social_media/youtube-icon.svg" alt="YouTube" /></a>
+          <a class="social-icon" href="https://au.pinterest.com/onelifecreativestudio/inspiration/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><img src="images/Social_media/pinterest-icon.svg" alt="Pinterest" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© <span id="year"></span> One Life Creative Studio. Established 2025. ABN: 94904785745.</p>
+    </div>
+  </div>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>
